@@ -3,9 +3,9 @@ using System.Threading;
 
 namespace CPTaskRunner
 {
-    public class Processor : IProcessRunner
+    public class DifferentProcessor : IProcessRunner
     {
-        public string Message { get; set; }
+        public string AnotherMessage { get; set; }
 
         public void Execute()
         {
@@ -15,7 +15,7 @@ namespace CPTaskRunner
         private void DoWork()
         {
             Thread.Sleep(2000);
-            Console.WriteLine($"Task Executed with message: { Message}");
+            Console.WriteLine($"Task Executed with message: { AnotherMessage}");
         }
     }
 }
